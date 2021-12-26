@@ -1,0 +1,15 @@
+iobroker:
+  image: buanet/iobroker:v6.0.0
+  container_name: iobroker
+  hostname: iobroker
+  environment:
+    - AVAHI="true"
+    - SETUID=1000
+    - SETGID=1000
+  volumes:
+    - ./volumes/iobroker:/opt/iobroker
+  networks:
+    iobroker_macvlan:
+      ipv4_address: 192.168.178.230
+    default:
+  restart: unless-stopped

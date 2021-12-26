@@ -54,7 +54,7 @@ def main():
       runPrebuildHook()
       dockerFileYaml = {}
       menuStateFileYaml = {}
-      dockerFileYaml["version"] = "3.6"
+      dockerFileYaml["version"] = "2"
       dockerFileYaml["services"] = {}
       menuStateFileYaml["services"] = {}
       dockerFileYaml["services"] = dockerComposeServicesYaml
