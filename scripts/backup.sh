@@ -51,7 +51,7 @@ fi
 BASEDIR=./backups
 TMPDIR=./.tmp
 DOW=$(date +%u)
-BASEBACKUPFILE="$(date +"%Y-%m-%d_%H%M")"
+BASEBACKUPFILE="$(uname -n)_$(date +"%Y-%m-%d_%H%M")"
 TMPBACKUPFILE="$TMPDIR/backup/backup_$BASEBACKUPFILE.tar.gz"
 BACKUPLIST="$TMPDIR/backup-list_$BASEBACKUPFILE.txt"
 LOGFILE="$BASEDIR/logs/backup_$BASEBACKUPFILE.log"
