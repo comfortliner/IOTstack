@@ -10,6 +10,6 @@ iobroker:
     - ./volumes/iobroker:/opt/iobroker
   networks:
     macvlan_nw:
-      ipv4_address: 192.168.178.225
+      ipv4_address: 192.168.178.245
     default:
   restart: unless-stopped
