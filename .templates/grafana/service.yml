@@ -1,5 +1,6 @@
 grafana:
   container_name: grafana
+  hostname: grafana
   image: grafana/grafana
   restart: unless-stopped
   user: "0"
@@ -9,8 +10,5 @@ grafana:
     - GF_PATHS_DATA=/var/lib/grafana
     - GF_PATHS_LOGS=/var/log/grafana
   volumes:
-    - ./volumes/grafana/data:/var/lib/grafana
-    - ./volumes/grafana/log:/var/log/grafana
-  networks:
-    - iotstack_nw
-
+    - /mnt/influxdb/grafana/data:/var/lib/grafana
+    - /mnt/influxdb/grafana/log:/var/log/grafana
