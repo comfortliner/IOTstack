@@ -1,5 +1,5 @@
 iobroker:
-  image: buanet/iobroker:v7.0.1
+  image: buanet/iobroker:latest-v8
   container_name: iobroker
   hostname: iobroker
   privileged: true
